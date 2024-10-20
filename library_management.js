@@ -41,7 +41,14 @@ listBooks () {
     this.books.forEach (book =>
         console.log (`Title: ${book.title}, Available: ${book.isAvailable}`) // only want title and availabillity here. 
     )
-}}
+}
+
+// Task 5: Handle books Borrowing and Returning 
+calculateTotalBooksAvailable () {
+    return this.getAvailableBooks () // the getAvailableBooks method works for what the task is asking for 
+}
+
+}
 
 // Task 3: Create a Patron Class
 
@@ -85,3 +92,4 @@ borrowBook (book) { // overriding parent class method
         console.log (`ERROR: ${book.title} is either invalid or not available`)
     }
 }}
+
