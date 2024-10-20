@@ -69,3 +69,19 @@ let bookFinder = this.borrowedBooks.find(item = item.title === book.title) // ch
         console.log(`ERROR:${book.title} cannot be returned. Please contact administration about the error.`)
     }
 }};
+
+// Task 4: Create VIPPatron Class that Inherits from Patron
+
+class VIPPatron extends Patron {
+    constructor (name, borrowedBooks, priority) {
+        super (name, borrowedBooks)
+        priority = true
+    }
+
+borrowBook (book) { // overriding parent class method 
+    if (this.priority = true && book.isAvailable === true) {
+        super.borrowBook(book) // calling back method from parent class to prevent repeat code
+    } else {
+        console.log (`ERROR: ${book.title} is either invalid or not available`)
+    }
+}}
